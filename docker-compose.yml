@@ -39,6 +39,9 @@ services:
             # Disables email confirmation requirement
             EMAIL_CONFIRMATION_DISABLED: 'true'
 
+            # Set Chinese support
+            OVERLEAF_SITE_LANGUAGE : zh-CN
+
             ## Set for SSL via nginx-proxy
             #VIRTUAL_HOST: 103.112.212.22
 
