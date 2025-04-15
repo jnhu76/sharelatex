@@ -12,7 +12,39 @@
 ## 📁 文件说明
 
 - `docker-compose.yml`: 启动配置文件，需要修改 image 内容和相关设置（如 email、banner 等）
-- `Dockerfile`: 构建文件，基于 sharelatex/sharelatex 镜像，完整安装 TeXLive 2025 和 Windows 字体
+- `Dockerfile`: 构建文件，基于 sharelatex/sharelatex 镜像，完整安装 TeXLive 2025 和 Windows 字体。**您可以基于这个文件构建您自己的镜像**。
+
+## 📦 镜像列表
+
+### docker hub （国外）
+
+| 镜像名称               | 版本     | 描述                 |
+| ---------------------- | -------- | -------------------- |
+| fred1653/sharelatex-full | 0.1.2  | TeXLive 2025 版本， node v 20 版本 |
+| fred1653/sharelatex-full | 0.1.1  | TeXLive 2020 版本， node v 18 版本 |
+
+使用方法:
+
+```bash
+docker login --username=Username
+
+docker pull fred1653/sharelatex-full:0.1.2
+```
+
+### Tencent Cloud (国内)
+
+| 镜像名称               | 版本     | 描述                 |
+| ---------------------- | -------- | -------------------- |
+| fred1653/sharelatex-full | 0.1.2  | TeXLive 2025 版本， node v 20 版本 |
+| fred1653/sharelatex-full | 0.1.1  | TeXLive 2020 版本， node v 18 版本 |
+
+使用方法:
+
+```bash
+docker login ccr.ccs.tencentyun.com --username=YOUR_ID
+
+docker pull ccr.ccs.tencentyun.com/overleaf/sharelatex-full:[tag]
+```
 
 ## 🔧 使用方法
 
@@ -21,6 +53,7 @@
 ```bash
 sudo snap install docker --classic
 ```
+
 或者参考docker官方文档：官方文档：URL_ADDRESS.docker.com/engine/install/ubuntu/
 
 ### 2️⃣ 制定自己的镜像
@@ -42,7 +75,6 @@ docker-compose up -d
 - 🔑 管理员注册：http://{ip}:{port}/launchpad
 
 - 🚪 用户登录：http://{ip}:{port}/login
-
 
 ## 🚧 WIP
 
